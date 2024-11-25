@@ -5,7 +5,6 @@ const R2EXPLORER_WORKER_NAME = process.env.R2EXPLORER_WORKER_NAME;
 const R2EXPLORER_BUCKETS = process.env.R2EXPLORER_BUCKETS;
 const R2EXPLORER_CONFIG = process.env.R2EXPLORER_CONFIG;
 const R2EXPLORER_DOMAIN = process.env.R2EXPLORER_DOMAIN;
-const CF_ACCOUNT_ID = process.env.CF_ACCOUNT_ID;
 const CF_API_TOKEN = process.env.CF_API_TOKEN;
 
 if (!R2EXPLORER_WORKER_NAME) {
@@ -32,7 +31,6 @@ let wranglerConfig = `
 name = "${R2EXPLORER_WORKER_NAME}"
 compatibility_date = "2023-05-12"
 main = "src/index.ts"
-account_id = "${CF_ACCOUNT_ID}"
 `;
 
 if (R2EXPLORER_DOMAIN) {

@@ -2,7 +2,6 @@ name = "my-r2-explorer"
 compatibility_date = "2023-05-12"
 main = "index.ts"
 workers_dev = true
-account_id = "7d27c1d0c02d6db874280b238ad498c0"
 
 [[r2_buckets]]
 binding = 'teste'
