@@ -59,6 +59,7 @@ for (const bucket of R2EXPLORER_BUCKETS.split("\n")) {
 binding = '${split[0]}'
 bucket_name = '${split[1]}'
 preview_bucket_name = '${split[1]}'
+jurisdiction = 'eu'
 `;
 
 }
