@@ -29,8 +29,10 @@ if (!CF_API_TOKEN) {
 
 let wranglerConfig = `
 name = "${R2EXPLORER_WORKER_NAME}"
-compatibility_date = "2023-05-12"
+# compatibility_date = "2023-05-12"
+compatibility_date = "2024-11-11"
 main = "src/index.ts"
+
 `;
 
 if (R2EXPLORER_DOMAIN) {
@@ -63,6 +65,13 @@ jurisdiction = 'eu'
 `;
 
 }
+
+wranglerConfig += `
+[observability.logs]
+enabled = true
+[placement]
+mode = "smart"
+`;
 
 console.log(wranglerConfig)
 fs.writeFileSync(__dirname + "/wrangler.toml", wranglerConfig);
